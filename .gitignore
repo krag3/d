@@ -1,0 +1,8 @@
+.vim/backup/*
+.vim/swap/*
+.vim/vendor/*
+.zsh/.zshrc_local
+
+dotconfig/nushell/*
+!dotconfig/nushell/config.nu
+!dotconfig/nushell/env.nu
