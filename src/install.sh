@@ -5,12 +5,12 @@ PKG_MANAGER=""
 DISTRO=""
 
 # Check if apt is installed
-if command -v apt >/dev/null 2>&1; then
-  PKG_MANAGER="apt"
-  DSTRO="debian"
-elif command -v brew >/dev/null 2>&1; then
+if command -v brew >/dev/null 2>&1; then
   PKG_MANAGER="brew"
   DISTRO="macos"
+elif command -v apt >/dev/null 2>&1; then
+  PKG_MANAGER="apt"
+  DSTRO="debian"
 else
   echo "\033[31mPlease run this script on a supported system\033[0m"
   echo "\033[31mExiting...\033[0m"; \
