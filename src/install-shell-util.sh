@@ -83,18 +83,3 @@ if [ -z `which nu` ]; then
 else
   echo "\033[32mSKIP\033[0m"
 fi
-
-
-echo "\033[33mInstall oxker...\033[0m"
-if [ -z `which oxker` ]; then
-  . $SRC/install/pkg/mise/oxker.sh
-else
-  echo "\033[32mSKIP\033[0m"
-fi
-
-echo "\033[33mInstall lazydocker...\033[0m"
-if [ -z `which lazydocker` ]; then
-  . $SRC/install/pkg/mise/lazydocker.sh
-else
-  echo "\033[32mSKIP\033[0m"
-fi
