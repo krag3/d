@@ -15,4 +15,7 @@ make install
 
 # additional shell utils
 make install-shell-util
+
+# remove symlinks
+make clean
 ```
