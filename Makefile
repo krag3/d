@@ -1,7 +1,7 @@
 .PHONY: all
 all: check init install load
 
-ROOT := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
+export ROOT := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 export SRC = $(ROOT)/src
 export DOTFILES = $(ROOT)/dotfiles
 export DOTCONFIG = $(ROOT)/dotconfig
@@ -17,6 +17,10 @@ init:
 .PHONY: install
 install:
 	@$(SRC)/install.sh
+
+.PHONY: install-shell-util
+install-shell-util:
+	@$(SRC)/install-shell-util.sh
 
 .PHONY: load
 load:

@@ -17,41 +17,30 @@ else
   exit 1
 fi
 
-echo "\033[33mInstall asdf...\033[0m"
-if [ -z `which asdf` ]; then
-  . ./install/pkg/git/asdf.sh
+# echo "\033[33mInstall asdf...\033[0m"
+# if [ -z `which asdf` ]; then
+#   . $SRC/install/pkg/git/asdf.sh
+# else
+#   echo "\033[32mSKIP\033[0m"
+# fi
+
+echo "\033[33mInstall mise...\033[0m"
+if [ -z `which mise` ]; then
+  . $SRC/install/pkg/curl/mise.sh
 else
   echo "\033[32mSKIP\033[0m"
 fi
 
 echo "\033[33mInstall zsh...\033[0m"
 if [ -z `which zsh` ]; then
-  . ./install/pkg/$PKG_MANAGER/zsh.sh
+  . $SRC/install/pkg/$PKG_MANAGER/zsh.sh
 else
   echo "\033[32mSKIP\033[0m"
 fi
 
 echo "\033[33mInstall zinit...\033[0m"
-if [ -z `which zinit` ]; then
+if [ ! -e "$HOME/.local/share/zinit/zinit.git/zinit.zsh" ]; then
   . $SRC/install/pkg/curl/zinit.sh
-else
-  echo "\033[32mSKIP\033[0m"
-fi
-
-echo "\033[33mInstall zellij...\033[0m"
-if [ -z `which zellij` ]; then
-  if [ "$DISTRO" = "macos" ]; then
-    . $SRC/install/pkg/brew/zellij.sh
-  else
-    . $SRC/install/pkg/curl/debian/zellij.sh
-  fi
-else
-  echo "\033[32mSKIP\033[0m"
-fi
-
-echo "\033[33mInstall nushell...\033[0m"
-if [ -z `which nu` ]; then
-  . $SRC/install/pkg/$PKG_MANAGER/nushell.sh
 else
   echo "\033[32mSKIP\033[0m"
 fi

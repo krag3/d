@@ -21,3 +21,4 @@ do
   ln -snfv "$f" "${HOME}/.config/`basename $f`"
 done
 
+ln -snfv ${ROOT}/.zsh ${HOME}/.zsh

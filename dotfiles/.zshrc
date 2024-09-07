@@ -6,7 +6,7 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 
 export HISTFILE=${HOME}/.zsh_history
-export HISTSIZE=1000
+export HISTSIZE=100000
 export SAVEHIST=100000
 
 export PATH="$HOME/.local/bin:$PATH"
@@ -18,48 +18,9 @@ setopt extended_history
 setopt hist_reduce_blanks
 setopt IGNOREEOF
 
-export EDITOR=vim
-
-function history-all { history -E 1 }
-function history-grep { history -E 1 | grep "$1" }
-
-# Ctrl+S でターミナルが止まるのを無効化
 stty stop undef
 
-# aliases
-
-# sudo の後のコマンドでエイリアスを有効にする
-alias sudo='sudo '
-
-# watchでaliasを有効に
-alias watch='watch '
-
-alias ls='ls -laG'
-alias mkdir='mkdir -p'
-
-alias less='less -R'
-
-alias gs='git status'
-alias gd='git diff'
-alias gc='git commit'
-alias gl='git log'
-
-alias dcom='docker compose'
-alias dmac='docker-machine'
-alias dlog='docker compose logs -f --tail=100'
-
-alias ktl='kubectl'
-
-alias ':q'='exit'
-
 if [[ $TERM == xterm ]]; then TERM=xterm-256color; fi
-
-[ -f ${HOME}/.zsh/.zshrc/local ] && . ${HOME}/.zsh/.zshrc/local
-[ -f ${HOME}/.zsh/.zshrc/`uname` ] && . ${HOME}/.zsh/.zshrc/`uname`
-[ -f ${HOME}/.zsh/.zshrc/asdf ] && . ${HOME}/.zsh/.zshrc/asdf
-[ -f ${HOME}/.zsh/.zshrc/asdf_go ] && . ${HOME}/.zsh/.zshrc/go
-[ -f ${HOME}/.zsh/.zshrc/kubectl ] && [ -e /usr/bin/kubectl ] && . ${HOME}/.zsh/.zshrc/kubectl
-
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -86,3 +47,10 @@ zinit light zdharma/history-search-multi-word
 
 ####
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+for file in ${HOME}/.zsh/.zshrc.d/*.zsh; do
+  [ -f $file ] && . $file
+done
