@@ -40,7 +40,7 @@ fi
 
 echo "\033[33mInstall fzf...\033[0m"
 if [ -z `which fzf` ]; then
-  . $SRC/install/pkg/mise/fzf.sh
+  . $SRC/install/pkg/git/fzf.sh
 else
   echo "\033[32mSKIP\033[0m"
 fi
