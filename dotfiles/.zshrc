@@ -20,6 +20,9 @@ setopt IGNOREEOF
 
 stty stop undef
 
+autoload -Uz compinit
+compinit
+
 if [[ $TERM == xterm ]]; then TERM=xterm-256color; fi
 
 ### Added by Zinit's installer
