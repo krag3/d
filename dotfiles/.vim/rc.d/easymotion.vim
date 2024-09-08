@@ -1,0 +1,11 @@
+
+nmap [shortcut]<space> <Plug>(easymotion-overwin-f2)
+vmap [shortcut]<space> <Plug>(easymotion-bd-f2)
+nmap [shortcut]j <Plug>(easymotion-j)
+vmap [shortcut]j <Plug>(easymotion-j)
+nmap [shortcut]k <Plug>(easymotion-k)
+vmap [shortcut]k <Plug>(easymotion-k)
+nmap [shortcut]h <Plug>(easymotion-linebackward)
+vmap [shortcut]h <Plug>(easymotion-linebackward)
+nmap [shortcut]l <Plug>(easymotion-lineforward)
+vmap [shortcut]l <Plug>(easymotion-lineforward)

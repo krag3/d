@@ -13,9 +13,18 @@ make init
 # re-install packages
 make install
 
-# additional shell utils
-make install-shell-util
-
 # remove symlinks
 make clean
+```
+
+## shell-utils
+
+```
+make install-shell-util
+```
+
+## Vim
+
+```
+:PlugInstall
 ```

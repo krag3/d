@@ -1,10 +1,15 @@
-.vim/*
-!.vim/rc.d
-.vim/rc.d/local
+/dotfiles/.vim/**
+!/dotfiles/.vim/**/
+!/dotfiles/.vim/**/.keep
+!/dotfiles/.vim/rc.d
+!/dotfiles/.vim/rc.d/**
+/dotfiles/.vim/rc.d/local
 
-.zsh/*
-!.zsh/rc.d
-.zsh/rc.d/local
+/dotfiles/.zsh/**
+!/dotfiles/.zsh/**/
+!/dotfiles/.zsh/rc.d
+!/dotfiles/.zsh/rc.d/**
+/dotfiles/.zsh/rc.d/local
 
 dotconfig/nushell/*
 !dotconfig/nushell/config.nu
