@@ -66,6 +66,13 @@ else
   echo "\033[32mSKIP\033[0m"
 fi
 
+echo "\033[33mInstall rupa-z...\033[0m"
+if [ ! -e "$HOME/.local/opt/rupa-z" ]; then
+  . $SRC/install/pkg/git/rupa-z.sh
+else
+  echo "\033[32mSKIP\033[0m"
+fi
+
 echo "\033[33mInstall zellij...\033[0m"
 if [ -z `which zellij` ]; then
   if [ "$DISTRO" = "macos" ]; then
