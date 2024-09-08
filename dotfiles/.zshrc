@@ -54,6 +54,6 @@ zinit light zdharma/history-search-multi-word
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
-for file in ${HOME}/.zsh/.zshrc.d/*.zsh; do
+for file in ${HOME}/.zsh/rc.d/*.zsh; do
   [ -f $file ] && . $file
 done
