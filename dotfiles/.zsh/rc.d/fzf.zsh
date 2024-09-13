@@ -11,6 +11,8 @@ if which fzf >/dev/null 2>&1; then
 		'--filepath-word'
 	)
 
+  bindkey "^F" fzf-file-widget
+
 	# bat
 	export FZF_CTRL_T_OPTS="
 			--preview 'bat -r :100 --color=always --style=header,grid {}'"
