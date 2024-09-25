@@ -1,7 +1,7 @@
 alias sudo='sudo '
 alias watch='watch '
 
-alias ls='ls -laG'
+alias ls='ls -laGh'
 alias mkdir='mkdir -p'
 
 alias less='less -R'
