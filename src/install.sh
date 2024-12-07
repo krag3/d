@@ -17,12 +17,12 @@ else
   exit 1
 fi
 
-# echo "\033[33mInstall asdf...\033[0m"
-# if [ -z `which asdf` ]; then
-#   . $SRC/install/pkg/git/asdf.sh
-# else
-#   echo "\033[32mSKIP\033[0m"
-# fi
+echo "\033[33mInstall asdf...\033[0m"
+if [ -z `which asdf` ]; then
+  . $SRC/install/pkg/git/asdf.sh
+else
+  echo "\033[32mSKIP\033[0m"
+fi
 
 echo "\033[33mInstall mise...\033[0m"
 if [ -z `which mise` ]; then
