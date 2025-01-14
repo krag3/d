@@ -4,6 +4,7 @@
 !/dotfiles/.vim/rc.d
 !/dotfiles/.vim/rc.d/**
 /dotfiles/.vim/rc.d/local
+/dotfiles/.vim/plugged
 
 /dotfiles/.zsh/**
 !/dotfiles/.zsh/**/

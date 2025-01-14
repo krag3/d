@@ -57,3 +57,4 @@ zinit light zdharma/history-search-multi-word
 for file in ${HOME}/.zsh/rc.d/*.zsh; do
   [ -f $file ] && . $file
 done
+
